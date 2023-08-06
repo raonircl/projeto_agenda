@@ -16,6 +16,28 @@ class Contatos < Pessoa
     puts "Contato adicionado!"
   end
 
+  def editar_contato
+    print "Qual contato você quer editar: "
+    nome = gets.chomp
+
+    @agenda.each do |contato|
+      if contato[:nome].downcase == (nome.downcase)
+        print "Deseja continuar editando o nome? senão, aperte enter:"
+        nome_edit = contato[:nome]
+
+        contato[:nome] = gets.chomp
+        contato[:nome] = contato[:nome].empty? ? nome_edit : contato[:nome]
+        
+        print "Deseja continuar editando o número? senão, aperte enter"
+        numero_edit = contato[:numero]
+
+        contato[:numero] = gets.chomp
+        contato[:numero] = contato[:numero].empty? ? numero_edit : contato[:numero] 
+      end
+    end
+
+  end
+
   def listar_contatos
     @agenda.each do |lista|
       puts "Nome: #{lista[:nome]} - Número: #{lista[:numero]}"

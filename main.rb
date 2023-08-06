@@ -15,7 +15,9 @@ loop do
     when op == 2
       adicionar_contato
     when op == 3
+      buscar_contato
     when op == 4
+      
     when op == 5
     else
     puts "Essa opção não existe!"
