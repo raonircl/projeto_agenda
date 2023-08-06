@@ -17,8 +17,9 @@ loop do
     when op == 3
       buscar_contato
     when op == 4
-      
+      editar_contato
     when op == 5
+      remover_contato
     else
     puts "Essa opção não existe!"
   end
