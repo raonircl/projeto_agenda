@@ -13,7 +13,7 @@ loop do
     when op == 1
       listar_contatos
     when op == 2
-      salvar_contato
+      adicionar_contato
     when op == 3
     when op == 4
     when op == 5
