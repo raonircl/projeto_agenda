@@ -7,6 +7,7 @@ loop
   when op == 0
     puts "Até mais!"
   when op == 1
+    contatos
   when op == 2
   when op == 3
   when op == 4
