@@ -5,13 +5,10 @@ class Contatos < Pessoa
 
   def initialize(nome, numero)
     super(nome, numero)
+    @agenda = []
   end
 
   def adicionar_contato(nome, numero)
-    print "Nome: "
-    @nome = gets.chomp
-    print "Número: "
-    @numero = gets.chomp
     @agenda << { nome: nome, numero: numero }
     puts "Contato adicionado!"
   end
